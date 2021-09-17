@@ -7,12 +7,7 @@ public class sumCol {
         int w = sc.nextInt();
         int h = sc.nextInt();
         int [][]arr=new int[w][h];
-        for(int i=0;i<w;i++){
-            for(int j=0;j<h;j++){
-                System.out.println("Input arr["+i+"]["+j+"]: ");
-                arr[i][j] = sc.nextInt();
-            }
-        }
+        inputArr2D(arr,w,h,sc);
         System.out.println("What column u want to count sum");
         int row = sc.nextInt();
         int sum=0;
@@ -21,5 +16,14 @@ public class sumCol {
         }
         System.out.println("Sum of column "+row+" is: "+sum);
         sc.close();
+    }
+    public static void inputArr2D(int [][]arr,int w,int h,Scanner sc){
+        for(int i=0;i<w;i++){
+            for(int j=0;j<h;j++){
+                System.out.println("Input arr["+i+"]["+j+"]: ");
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
     }
 }
